@@ -1,3 +1,93 @@
+:root {
+  --background-color: #F9E9D5;
+  --background-opacity: rgba(0,0,0,0.5);
+  --font-color: black
+}
+
 .App {
+  min-height: 100vh;
+  background: var(--background-color);
+  height: 100%;
+  font-size: 25px;
+  color: var(--font-color);
+  transition: 0.5s
+}
+
+/* *{
+outline: 1px solid red;
+} */
+
+.header {
+  display: flex;
+}
+
+.help {
+  width: 100%;
+  padding: 5px;
+}
+
+
+.theme{
+  float: right;
+  display: flex;
+  padding: 5px;
+}
+
+
+.switch-wrap {
+  cursor: pointer;
+  background: var(--background-opacity);
+  padding: 7px;
+  width: 40px;
+  height: 20px;
+  border-radius: 23.5px;
+}
+.switch-wrap input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 0fr 1fr 1fr;
+  transition: 0.2s;
+}
+.switch::after {
+  content: "";
+  border-radius: 50%;
+  background:  var(--background-color);
+  grid-column: 2;
+}
+
+input:checked + .switch {
+  grid-template-columns: 1fr 1fr 0fr;
+}
+
+input:checked + .switch::after {
+  background:  var(--background-color);
+}
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 220px;
+  background-color: var(--background-opacity);
+  color: var(--font-color);
   text-align: center;
+  padding: 5px;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }

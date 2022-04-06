@@ -8,7 +8,7 @@
   min-height: 100vh;
   background: var(--background-color);
   height: 100%;
-  font-size: 25px;
+  font-size: 20px;
   color: var(--font-color);
   transition: 0.5s
 }
@@ -74,6 +74,7 @@ input:checked + .switch::after {
 .tooltip {
   position: relative;
   display: inline-block;
+  cursor: pointer;
 }
 
 .tooltip .tooltiptext {

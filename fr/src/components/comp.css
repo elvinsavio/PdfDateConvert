@@ -1,0 +1,41 @@
+:root {
+  --background-opacity-hover: rgba(0,0,0,0.8)
+}
+
+.upload-box{
+  height: 100%;
+  color: var(--color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column  ;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.file-upload-label {
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.submit-button {
+  border: none;
+  color: var(--color);
+  background: rgba(0,0,0,0.5);
+  margin: 20px;
+  font-size: 20px;
+  transition: background 0.5s;
+  width: 200px;
+  height: 50px;
+}
+
+.submit-button:hover {
+  background: var(--background-opacity);
+  transition: background 0.5s
+
+}
